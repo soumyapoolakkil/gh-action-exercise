@@ -1,8 +1,10 @@
 name: Issue Trigger and Output
-on: Issue
+on: issues
 jobs:
   output:
     runs-on: ubuntu-latest
     steps:
     - name: Output Github Info
-      run: echo "${{toJSON(github.issue)}}"
+      run: |
+          echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Body: ${{ github.event.issue.body }}"
