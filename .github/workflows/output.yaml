@@ -10,7 +10,7 @@ on:
     branches:
       - 'ma*'
     paths-ignore:
-      - '.github/worflows/*'
+      - '.github/workflows/*'
 jobs:
   output:
     runs-on: ubuntu-latest
