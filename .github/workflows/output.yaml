@@ -1,5 +1,16 @@
 name: Issue Trigger and Output
-on: issues
+on: 
+  issues:
+    types:
+      - opened
+      - closed
+      - edited
+  workflow_dispatch:
+  push:
+    branches:
+      - 'ma*'
+    paths-ignore:
+      - '.github/worflows/*'
 jobs:
   output:
     runs-on: ubuntu-latest
