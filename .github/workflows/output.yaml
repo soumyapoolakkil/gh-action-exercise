@@ -9,6 +9,8 @@ on:
   push:
     branches:
       - 'ma*'
+    branches-ignore:
+      - 'master'
     paths-ignore:
       - '.github/workflows/*'
 jobs:
